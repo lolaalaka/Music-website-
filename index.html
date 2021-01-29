@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Music App</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
+</head>
+<body >
+
+            <header class="wrapper">
+                <div class="hamburger">
+                    <div class="ham1"></div>
+                    <div class="ham2"></div>
+                    <div class="ham3"></div>
+                </div>
+                <div class="logo">Playlists Player</div>
+        
+                <nav class="nav">
+                    <ul>
+                        <li class="navlink home">Home</li>
+                        <li class="navlink compliations">Compliations</li>
+                        <li class="navlink recommended">Recommended Playlist</li>
+                        <li class="navlink ppmix">PP.  Mix</li>
+                        <li><div class="divider"></div></li>
+                        <li class="nav-ii about">About</li>
+                        <li class="nav-ii contact">Contact</li>
+                    </ul>
+                </nav>
+        
+                <div class="small-content">
+        
+                    <div class="smalltrack-art  icon-and-image"></div> 
+                    <div class="smalltrack-word">
+                        
+                        <div class="smalltrack-name">Track Name</div> 
+                      <div class="smalltrack-artist">Track Artist</div> 
+                    </div>
+        
+                    <div class="line"></div>
+        
+                    <div class="navigation">
+                        <button  class="btn prev">
+                          <i class="fas fa-step-backward"></i>
+                        </button>
+                    
+                        <button  class="btn smallplay">
+                          <i class="fas fa-play"></i>
+                        </button>
+                        <button  class="btn next">
+                          <i class="fas fa-step-forward"></i>
+                        </button>
+                        <button class="list-icon icon-and-image">
+                            <i class="fas fa-list-ul"></i>
+                        </button>
+                    </div>
+                </div>
+            </header>
+        
+            <div class="centerline"></div>
+        
+            <div class="bigtext">
+                <div class="centertext">
+                 <span class="text">P</span>
+                 <span class="text">L</span>
+                 <span class="text">A</span> 
+                 <span class="text">Y</span>
+                 <span class="text">E</span>
+                 <span class="text">R</span>
+                </div>
+                
+                <span><i class="fas fa-play-circle playbtn"></i></span>
+                <div class="circle-container">
+                    <div class="text-container"><span class="texts">PP</span> <div class="hr-line"></div> Playlists <div class="hr-line"></div> <span class="texts">14</span></div>
+                    <div class="circle"> <a href="itunes.html"><p>Connect <br> to <br> iTunes</p></a></div>
+                </div>
+                <div class="wavecontainer">
+                    <div class="wave one"></div>
+                    <div class="wave two"></div>
+                    <div class="wave three"></div>
+                 </div>
+            </div>
+        
+            <div class="modal">
+                <div class="playlist-player">
+                    <div class="player">
+                        <div class="top">
+                            <div class="track-art"></div>
+                            <div class="track-word">
+                                 <div class="track-name">Track Name</div> 
+                                 <div class="track-artist">Track Artist</div>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <div class="navigation">
+                                <button  class="btn prev">
+                                   <i class="fas fa-step-backward"></i>
+                                </button>
+                             
+                                <button  class="btn bigplay">
+                                   <i class="fas fa-play"></i>
+                                </button>
+                                <button  class="btn next">
+                                   <i class="fas fa-step-forward"></i>
+                                </button>
+                            </div>
+                            <div class="progress-container">
+                                <div class="current-time">00:00</div>
+                                <input type="range"  class="progress" min="1" max="100" value="0" onchange="seekTo()">
+                                <div class="end-time">00:00</div>
+                            </div>
+             
+                        </div>
+        
+                    </div>
+        
+                    <div class="playlists">
+        
+                        <div class="playlist-box">
+                            <img src="https://images.pexels.com/photos/3328337/pexels-photo-3328337.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" class="pl-image">
+                            <div class="pl-word">
+                                <div class="pl-artist">MONDAY COMES</div> 
+                                 <div class="pl-trackname">Late</div> 
+                              </div>
+                        </div>
+                        <div class="playlist-box">
+                            <img src="https://images.unsplash.com/photo-1600932717369-d507b606a25d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDl8fGFsYnVtJTIwYXJ0fGVufDB8MXwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="" class="pl-image">
+                            <div class="pl-word">
+                                <div class="pl-artist">EXOTICA</div> 
+                                 <div class="pl-trackname">Juan</div> 
+                              </div>
+                        </div>
+                        <div class="playlist-box">
+                            <img src="https://images.unsplash.com/photo-1558114073-fd334d98bbc5?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MzN8fGFsYnVtJTIwY292ZXJzfGVufDB8MXwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="" class="pl-image">
+                            <div class="pl-word">
+                                <div class="pl-artist">Frost Wire</div> 
+                                 <div class="pl-trackname">Kirk</div> 
+                              </div>
+                        </div>
+                        <div class="playlist-box">
+                            <img src="https://images.unsplash.com/photo-1556139943-4bdca53adf1e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80" alt="" class="pl-image">
+                            <div class="pl-word">
+                                <div class="pl-artist">SPRAY PAINT IT GOLD</div> 
+                                 <div class="pl-trackname">Little Glass Men</div> 
+                              </div>
+                        </div>
+                        <div class="playlist-box">
+                            <img src="https://images.unsplash.com/photo-1605798748793-afa30efa801e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OTR8fGFsYnVtJTIwYXJ0fGVufDB8MXwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="" class="pl-image">
+                            <div class="pl-word">
+                                <div class="pl-artist">SILLY BUS</div> 
+                                 <div class="pl-trackname">Captive Portal</div> 
+                              </div>
+                        </div>
+                        <div class="playlist-box">
+                            <img src="https://images.unsplash.com/photo-1511867674775-1176e6174052?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mzh8fGFsYnVtJTIwY292ZXJzfGVufDB8MXwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="" class="pl-image">
+                            <div class="pl-word">
+                                <div class="pl-artist">LONELY SPIDER</div> 
+                                 <div class="pl-trackname">Cullah</div> 
+                              </div>
+                        </div>
+                        <div class="playlist-box">
+                            <img src="https://images.unsplash.com/photo-1602283361240-15f7e18ccb87?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTQwfHxhbGJ1bSUyMGFydHxlbnwwfDF8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="" class="pl-image">
+                            <div class="pl-word">
+                                <div class="pl-artist">FOG LAKE</div> 
+                                 <div class="pl-trackname">Kerosene</div> 
+                              </div>
+                        </div>
+        
+                    </div>       
+                </div>
+    </div>
+    
+
+    
+
+   
+
+ <script src="js/index.js"></script>
+ 
+</body>
+</html>

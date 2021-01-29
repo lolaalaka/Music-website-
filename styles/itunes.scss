@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,700');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    font-family: 'Oswald';
+    color: rgba(254, 44, 86, 0.808);
+   
+}
+
+.container{
+    position: relative;
+    width: 90%;
+    margin:0 auto;
+    background-color: rgba(29, 28, 28, 0.315);
+}
+
+.featured{
+
+    margin: 20px 30px ;
+
+    h3{
+        font-size: 23px;
+    }
+
+    .flexcontainer{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .image{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    
+    p{
+        text-align: center;
+        font-size: 18px;
+    }
+
+}
+
+#search{
+   width: 100%;
+   height: 50px;
+   border: none;
+   outline: none;
+   padding-left: 40px;
+   display: block;
+   font-size: 15px;
+   background-color:inherit;
+   color: white;
+}
+.icon{
+    color: rgba(252, 250, 250, 0.534);
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    
+}
+
+.linedivider{
+    width: 100%;
+    height: 1px;
+    background-color: rgba(128, 128, 128, 0.411);
+}
+
+
+.tracks{
+
+    h3{
+        font-size: 23px;
+    }
+
+    .tracks-card{
+        width: 40vw;
+        height: 50vh;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+     /* width */
+     ::-webkit-scrollbar {
+        width: 15px;
+        }
+     
+     /* Track */
+     ::-webkit-scrollbar-track {
+       background: rgba(255, 255, 255, 0.911);
+       border-radius: 10px;
+     }
+      
+     /* Handle */
+     ::-webkit-scrollbar-thumb {
+        background:rgba(254, 44, 86, 0.801);
+       border-radius: 10px;
+     }
+     
+     /* Handle on hover */
+     ::-webkit-scrollbar-thumb:hover {
+       background: rgb(226, 41, 78) ;
+    }
+
+    .linedivider{
+        width: 95%;
+        height: 1px;
+        background-color: rgba(128, 128, 128, 0.411);
+    }
+
+    .heading{
+        display: flex;
+        padding-left: 200px;
+        font-size: 17px;
+
+        .secondpara{
+            padding-left:  190px;
+        }
+
+    }
+
+    
+}
+
+.songcards{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    background-color:inherit;
+    padding: 10px 20px;
+    cursor: pointer;
+     &:hover{
+         background-color: rgba(95, 82, 82, 0.13);
+     }
+    .song-art{
+        width: 40px;
+        height: 40px;
+        border-radius: 50px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        margin: 10px 0 0 0;
+    }
+
+    .text{
+    width: 50%;
+     padding: 19px 0 19px 130px;
+    }
+
+    .song-title{
+        font-weight: bold;
+        font-size: 17px;
+    }
+    .song-album{
+        margin-top: 19px;
+        width: 40%;
+        padding-left: 130px;
+    }
+}
+
+
+.sectionTwo{
+    display: flex;
+    margin-left: 30px;
+    justify-content: space-between;
+    
+}
+
+.sectionTwo{
+    display: flex;
+    margin-left: 30px;
+    justify-content: space-between;
+}
+
+.media-play{
+    background-color:inherit;
+    border-radius: 5%;
+    width: 40vw;
+    height: 30vw;
+    position: fixed;
+    top:100px;
+    left: 53%;
+    animation: slide 1s ease-in alternate;
+    background-color:inherit;
+
+    @keyframes slide {
+           from{ left: 100%;}
+           to{ left: 53%;}
+    }
+}
+
+.track-image{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin:15px auto;
+}
+
+.media-text{
+    font-size: 1.5rem;
+    position: absolute;
+    top: 75%;
+    left:30%;
+}
+
+.music-artistName{
+    text-align: center;
+    margin: 0;
+}
+.music-title{
+    text-align: center;
+    font-size: 1.5rem;
+    margin:20px 0 0 0;
+}
+.video-artistName{
+    font-size: 1rem; 
+}
+
+.videos{
+    margin: 50px 40px ;
+    cursor: pointer;
+    
+    h3{
+       font-size: 23px;
+    }
+    .videos-card{
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+     
+
+  
+  .video-art{
+    width: 150px;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.5s ease;
+     
+      &:hover{
+       transform: scale(1.1);
+     }
+  }
+}
+
+
+  
+
+#audio{
+    position: absolute;
+    top: 75%;
+    left: 15%;
+    margin-top: 20px;
+    width: 70%;
+
+    &:focus{
+        outline: none;
+    }
+}
+
+audio::-webkit-media-controls-panel{
+    background-color:rgb(92, 92, 94);
+   
+}   
+
+#video{
+    width: 500px;
+    height: 450px;
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    top: -80px;
+    left: 25px;
+    
+    &:focus{
+        outline: none;
+    }
+}
+
+video::-webkit-media-controls-panel{
+    position: absolute;
+    top: 73%;
+    width: 100%;
+    background-color: pink;
+}
+
+.error{
+    font-size: 20px;
+}
+
+#loading{
+  width: 4rem;
+  height: 4rem;
+  border: 5px solid #f3f3f3;
+  border-top: 6px solid rgba(254, 44, 86, 0.808);
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: auto;
+  visibility: hidden;
+  animation: spin 1s infinite linear;
+
+  @keyframes spin {
+    from{
+        transform: rotate(0deg);
+    }
+  
+    to{
+        transform: rotate(360deg);
+    }
+  }
+
+}
+
+#loading.display{
+    visibility: visible;
+}
+
