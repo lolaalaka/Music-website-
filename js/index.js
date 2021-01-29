@@ -31,6 +31,29 @@ let isPlaying = false;
 let trackIndex = 0;
 let updateTimer;
 
+const bodyContainer = document.querySelector('.container');
+
+
+let matchResult = window.matchMedia("(min-width: 1024px)");
+
+
+   function isSmallScreen(matchResult){
+       if(matchResult.matches){
+               bodyContainer.style.display.visibility = "visible";
+        } else {
+
+                bodyContainer.style.display.visibility = "hidden";
+                let bodymessage = `
+                  <div class= "mobile-view"> Please view on a pc or mac :)</div>
+                `
+                  bodyContainer.innerHTML = bodymessage;
+            }
+ }
+
+window.addEventListener('resize', isSmallScreen(matchResult));
+
+
+
 //Displaying Navbar
 
 (function(){

@@ -6,6 +6,7 @@ const videosContainer = document.querySelector('.videos');
 const tracksContainer = document.querySelector('.tracks');
 const mediaPlayer = document.querySelector('.media-play');
 const loader = document.getElementById('loading');
+const bodyContainer = document.querySelector('.container');
 
 
 let matchResult = window.matchMedia("(min-width: 1024px)");
