@@ -523,4 +523,11 @@ body {
   margin: 12.5px 0;
   color: rgba(14, 13, 13, 0.562);
 }
+
+.mobile-view {
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  margin-top: 300px;
+}
 /*# sourceMappingURL=index.css.map */
