@@ -161,6 +161,9 @@ body {
 .songcards .text {
   width: 50%;
   padding: 19px 0 19px 130px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .songcards .song-title {
@@ -171,7 +174,9 @@ body {
 .songcards .song-album {
   margin-top: 19px;
   width: 40%;
-  padding-left: 130px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .sectionTwo {

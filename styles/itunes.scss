@@ -13,6 +13,12 @@ body{
    
 }
 
+@mixin hidetext {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .container{
     position: relative;
     width: 90%;
@@ -151,8 +157,9 @@ body{
     }
 
     .text{
-    width: 50%;
+     width: 50%;
      padding: 19px 0 19px 130px;
+     @include hidetext();
     }
 
     .song-title{
@@ -162,7 +169,7 @@ body{
     .song-album{
         margin-top: 19px;
         width: 40%;
-        padding-left: 130px;
+        @include hidetext();
     }
 }
 
