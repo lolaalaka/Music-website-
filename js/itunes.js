@@ -24,8 +24,9 @@ let matchResult = window.matchMedia("(min-width: 1024px)");
                   bodyContainer.innerHTML = bodymessage;
             }
  }
+ isSmallScreen(matchResult);
 
-window.addEventListener('resize', isSmallScreen(matchResult));
+ window.addEventListener('resize', ()=>isSmallScreen(matchResult));
 
 
 videosContainer.style.opacity = 0;

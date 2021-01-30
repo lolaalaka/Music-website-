@@ -47,6 +47,7 @@ body {
 .wrapper .logo {
   font-size: 20px;
   padding-top: 15px;
+  max-width: 200px;
 }
 
 .nav {
@@ -117,8 +118,12 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 0 0 750px;
   padding-top: 15px;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  position: absolute;
+  left: 68%;
 }
 
 .small-content .smalltrack-art {
@@ -169,16 +174,27 @@ body {
   opacity: 0.5;
 }
 
+.centerline {
+  width: 2px;
+  height: 80px;
+  background-color: white;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+}
+
 .bigtext {
-  margin: 0 500px;
+  margin: 0 auto;
+  max-width: 360px;
   z-index: 2;
+  padding-top: 150px;
   cursor: pointer;
 }
 
 .bigtext .text {
   font-size: 100px;
   font-weight: 100;
-  letter-spacing: 10px;
+  letter-spacing: 14px;
 }
 
 .bigtext .playbtn {
@@ -188,11 +204,11 @@ body {
   top: 70%;
   left: 46.9%;
   opacity: 0;
-  -webkit-transition: opacity 0.5s linear;
-  transition: opacity 0.5s linear;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
 }
 
-.bigtext .playbtn:hover {
+.bigtext:hover > .playbtn {
   opacity: 1;
 }
 
@@ -233,7 +249,7 @@ body {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  margin-top: 150px;
+  margin: 150px 0 0 20px;
   background-color: whitesmoke;
   -webkit-transition: all 1s;
   transition: all 1s;
@@ -257,13 +273,6 @@ body {
 
 .bigtext .circle p:hover {
   color: white;
-}
-
-.centerline {
-  width: 2px;
-  height: 80px;
-  background-color: white;
-  margin: 40px  auto 0 auto;
 }
 
 .wavecontainer {

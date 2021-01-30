@@ -48,9 +48,10 @@ let matchResult = window.matchMedia("(min-width: 1024px)");
                 `
                   bodyContainer.innerHTML = bodymessage;
             }
- }
+}
+isSmallScreen(matchResult);
 
-window.addEventListener('resize', isSmallScreen(matchResult));
+window.addEventListener('resize', ()=>isSmallScreen(matchResult));
 
 
 
@@ -309,8 +310,8 @@ loadTrack(trackIndex);
 
 
 const centerplaybtn = document.querySelector('.playbtn');
-const centerText = document.querySelector('.centertext');
-const centerLine = document.querySelector('.centerline');
+const centerText = document.querySelector('.text');
+centerLine = document.querySelector('.centerline');
 const circleContainer = document.querySelector('.circle-container');
 const centerCircle = document.querySelector('.circle');
 const wave = document.querySelector('.wavecontainer');
@@ -319,7 +320,8 @@ const wave = document.querySelector('.wavecontainer');
 const centerOperation = ()=>{
     centerplaybtn.addEventListener('click', ()=>{
         centerText.style.display = 'none';
-        centerLine.style.display = 'none';
+        centerLine.style.display = "none";
+        centerplaybtn.style.opacity = 0;
         circleContainer.style.visibility = "visible";
         wave.style.display = "none";
     })
